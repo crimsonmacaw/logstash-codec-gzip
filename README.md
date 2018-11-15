@@ -49,7 +49,7 @@ bundle exec rspec
 
 - Edit Logstash `Gemfile` and add the local plugin path, for example:
 ```ruby
-gem "logstash-codec-awesome", :path => "/your/local/logstash-codec-awesome"
+gem "logstash-codec-gzip", :path => "/your/local/logstash-codec-gzip"
 ```
 - Install plugin
 ```sh
@@ -57,7 +57,7 @@ bin/logstash-plugin install --no-verify
 ```
 - Run Logstash with your plugin
 ```sh
-bin/logstash -e 'codec {awesome {}}'
+bin/logstash -e 'codec {gzip {}}'
 ```
 At this point any modifications to the plugin code will be applied to this local Logstash setup. After modifying the plugin, simply rerun Logstash.
 
@@ -67,11 +67,11 @@ You can use the same **2.1** method to run your plugin in an installed Logstash 
 
 - Build your plugin gem
 ```sh
-gem build logstash-codec-awesome.gemspec
+gem build logstash-codec-gzip.gemspec
 ```
 - Install the plugin from the Logstash home
 ```sh
-bin/logstash-plugin install /your/local/plugin/logstash-codec-awesome.gem
+bin/logstash-plugin install /your/local/plugin/logstash-codec-gzip.gem
 ```
 - Start Logstash and proceed to test the plugin
 
@@ -82,5 +82,3 @@ All contributions are welcome: ideas, patches, documentation, bug reports, compl
 Programming is not a required skill. Whatever you've seen about open source and maintainers or community members  saying "send patches or die" - you will not see that here.
 
 It is more important to the community that you are able to contribute.
-
-For more information about contributing, see the [CONTRIBUTING](https://github.com/elastic/logstash/blob/master/CONTRIBUTING.md) file.
