@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'logstash-codec-gzip'
-  s.version       = '0.2.0'
+  s.version       = '0.3.0'
   s.licenses      = ['Apache-2.0']
   s.summary       = 'Logstash code for reading data in gzip format'
   s.description   = 'Logstash code for reading data in gzip format'
