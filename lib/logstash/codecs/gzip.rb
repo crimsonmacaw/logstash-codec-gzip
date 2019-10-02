@@ -3,6 +3,7 @@ require 'zlib'
 require 'stringio'
 
 require "logstash/codecs/base"
+require "logstash/util/charset"
 require "logstash/namespace"
 
 # This codec will decompress incoming gzip data or gzip compress
